@@ -1,6 +1,6 @@
 {
   "name": "pg-validator",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "postgresql database schema validation and creation utility",
   "main": "index.js",
   "scripts": {},
