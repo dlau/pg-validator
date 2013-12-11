@@ -1,10 +1,9 @@
 {
   "name": "pg-validator",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "postgresql database schema validation and creation utility",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "https://github.com/dlau/pg-validator"
@@ -31,7 +30,7 @@
     "tv4": "~1.0.11",
     "async": "~0.2.9"
   },
-  "bin" : {
-    "pg_validate" : "./bin/pg_validate"
+  "bin": {
+    "pg_validate": "./bin/pg_validate"
   }
 }
