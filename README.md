@@ -15,7 +15,7 @@ TODO: NPM
 
 #Usage
 
-  pg_validate [options]
+  Usage: pg_validate [options]
 
   Options:
 
@@ -25,6 +25,7 @@ TODO: NPM
     -h, --host [host name]          postgresql host name or ip
     -u, --user [user name]          postgresql user name
     -p, --password [user password]  postgresql password
+    -z, --validate                  validate schema
     -d,  --drop                     drop schema tables
     -c, --create                    create schema
 
