@@ -1,5 +1,6 @@
 ---
 #####
+#An example db specification
 #####
 db_name : testdb
 tables :
