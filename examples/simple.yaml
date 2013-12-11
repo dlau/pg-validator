@@ -1,0 +1,16 @@
+---
+#####
+#####
+db_name : testdb
+tables :
+  neighbors :
+    columns :
+      id : increments
+      name : string
+      address :
+        type : string
+        unique : true
+      spouse_name : 
+        type : string
+        defaultTo : No Spouse
+    primary_key : id
