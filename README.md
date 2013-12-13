@@ -49,13 +49,36 @@ tables :
       spouse_name : 
         type : string
         defaultTo : No Spouse
-    primary_key : id
+    primary : id
+    unique : name
+
+  associates :
+    columns :
+      id : increments
+      name : string
+      address :
+        type : string
+        unique : true
+      company_name : text
+    primary : id
+    unique : [name, company_name]
 ```
 
 While relatively straightforward, `pg-validator` is a simple wrapper around the [Knex](https://github.com/tgriesser/knex) module. Database columns are either simple a string, denoting the type, or an object.
 
 Columns that are defined as objects are required to have a `type`. Other parameters must follow the [Knex schema definition functions for columns](http://knexjs.org/#Chainable). In case the `knex` function does not have any parameters, the boolean value `true` should be used. This is demonstrated in the example above with the column `spouse_name`.
 
+
+All table properties other than the reserved keyword `columns` map to table commands. An array denotes multiple calls, while nested arrays will translate to an array being passed to the  `knex` which is chained.
+
+For example, to define multiple unique columns:
+`unique : [col1, col2, col3]`
+
+Compounded:
+`unique : [[col1, col2]]`
+
+Can mix and match, each element of the array maps to one chained `knex.table` call
+`unique : [col1, [col2, col3]]`
 
 #License
 
